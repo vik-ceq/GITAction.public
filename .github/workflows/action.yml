@@ -1,0 +1,17 @@
+name: Github-Action
+
+on: push
+
+jobs:
+  Github-action:
+    name: Lint code base
+    runs-on: windows
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Github-Action
+        uses: github/github-Action@v3
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
