@@ -5,7 +5,7 @@ on: push
 jobs:
   Github-action:
     name: Lint code base
-    runs-on: windows
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
